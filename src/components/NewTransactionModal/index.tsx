@@ -3,7 +3,6 @@ import Modal from "react-modal";
 import closeImg from "../../assets/close.svg";
 import incomeImg from "../../assets/income.svg";
 import outcomeImg from "../../assets/outcome.svg";
-import { api } from "../../services/api";
 import { TransactionsContext } from "../../TransactionsContext";
 import { Container, RadioBox, TransactionTypeContainer } from "./styles";
 
@@ -34,6 +33,12 @@ export function NewTransactionModal({
       type,
       category,
     });
+
+    setTitle("");
+    setCategory("");
+    setType("");
+    setAmount(0);
+    onRequestClose();
   }
 
   return (

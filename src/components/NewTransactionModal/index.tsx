@@ -32,7 +32,7 @@ export function NewTransactionModal({
       type,
     };
 
-    api.post("/transaction", data);
+    api.post("/transactions", data);
   }
 
   return (
